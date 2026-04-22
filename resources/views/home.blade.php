@@ -261,8 +261,7 @@ font-size:18px;
 <h1>Produk Terbaik Kami</h1>
 
 <p>
-Temukan berbagai pilihan donut dan produk terbaik
-dengan kualitas premium dan harga terbaik.
+Rasakan gigitan terbaik dengan rasa yang memanjakan lidah di setiap gigitannya
 </p>
 
 <a href="{{ route('products.index') }}" class="btn-primary-modern">
