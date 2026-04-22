@@ -61,18 +61,25 @@ class HomeController extends Controller
     // =============================
     // REALTIME SEARCH PRODUCT
     // =============================
-public function search(Request $request)
-{
-    if ($request->has('recommend')) {
-        $products = Product::latest()->take(8)->get();   // atau where('stock', '>', 0)
-    } else {
-        $query = $request->get('q');
-        $products = Product::where('name', 'LIKE', "%{$query}%")
-                           ->orWhere('description', 'LIKE', "%{$query}%")
-                           ->take(10)
-                           ->get();
+    public function search(Request $request)
+    {
+        if ($request->has('recommend')) {
+            $products = Product::latest()->take(8)->get();   // atau where('stock', '>', 0)
+        } else {
+            $query = $request->get('q');
+            $products = Product::where('name', 'LIKE', "%{$query}%")
+                            ->orWhere('description', 'LIKE', "%{$query}%")
+                            ->take(10)
+                            ->get();
+        }
+
+        return response()->json($products);
     }
 
-    return response()->json($products);
-}
+    public function products()
+    {
+        $products = Product::latest()->paginate(12); // biar gak berat
+
+        return view('product.index', compact('products'));
+    }
 }

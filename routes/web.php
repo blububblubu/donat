@@ -24,6 +24,11 @@ Route::get('/product/{product}', [HomeController::class,'show'])->name('product.
 //search
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 
+//produk
+Route::get('/products', [HomeController::class,'products'])->name('products.index');
+
+Route::get('/products/{product}', [HomeController::class,'show'])->name('product.show');
+
 /*
 |--------------------------------------------------------------------------
 | AUTH

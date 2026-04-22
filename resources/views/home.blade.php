@@ -265,7 +265,7 @@ Temukan berbagai pilihan donut dan produk terbaik
 dengan kualitas premium dan harga terbaik.
 </p>
 
-<a href="#produk" class="btn-primary-modern">
+<a href="{{ route('products.index') }}" class="btn-primary-modern">
 Lihat Semua Produk
 </a>
 
