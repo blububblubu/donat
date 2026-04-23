@@ -334,8 +334,8 @@ color:#888;
                     <img src="{{ asset('storage/logo.png') }}" alt="Fiava Logo" style="height: 48px;">
                 </a>
                 <p style="max-width: 320px; color: #444; line-height: 1.7;">
-                    Donat fresh premium dengan tekstur crunchy di luar dan moist di dalam. 
-                    Dibuat setiap hari dengan bahan terbaik untuk Anda.
+                Crunchy Mocaf adalah camilan brownies kering berbahan tepung mocaf (fermentasi singkong) yang tinggi serat, kalsium, dan bebas pengawet. Kami menghadirkan camilan sehat, lezat, dan bergizi dengan berbagai topping dan rasa, sebagai solusi ngemil praktis dan menyehatkan.
+
                 </p>
                 <p class="fw-medium" style="color: #c19a6b;">
                     Crunchy outside. Moist inside.
