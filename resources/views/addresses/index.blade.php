@@ -68,17 +68,29 @@
                         <div class="address-label">{{ $address->label }}</div>
                         <div class="text-muted">{{ $address->phone }}</div>
                     </div>
-                    <div>
-                        <a href="{{ route('addresses.edit', $address) }}" class="btn btn-sm btn-outline-warning btn-sm-modern me-1">
-                            <i class="fas fa-edit"></i>
+                    <div class="d-flex gap-2">
+                        
+                        <a href="{{ route('addresses.edit', $address) }}"
+                        class="btn btn-warning btn-sm btn-sm-modern">
+                            <i class="fas fa-edit me-1"></i>
+                            Edit
                         </a>
-                        <form action="{{ route('addresses.destroy', $address) }}" method="POST" class="d-inline" 
-                              onsubmit="return confirm('Hapus alamat ini?')">
-                            @csrf @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-outline-danger btn-sm-modern">
-                                <i class="fas fa-trash"></i>
+
+                        <form action="{{ route('addresses.destroy', $address) }}"
+                            method="POST"
+                            class="d-inline"
+                            onsubmit="return confirm('Hapus alamat ini?')">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit"
+                                    class="btn btn-outline-danger btn-sm btn-sm-modern">
+                                <i class="fas fa-trash me-1"></i>
+                                Hapus
                             </button>
                         </form>
+
                     </div>
                 </div>
                 <div class="address-text">
@@ -90,8 +102,8 @@
         @endforeach
     @endif
 
-    <a href="{{ url()->previous() }}" class="btn btn-secondary mt-3">
-        ← Kembali
-    </a>
+<a href="{{ route('cart.checkout') }}" class="btn btn-secondary mt-3">
+    Kembali 
+</a>
 </div>
 @endsection
